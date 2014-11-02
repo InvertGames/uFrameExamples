@@ -37,10 +37,14 @@ public class WavesFPSGameController : WavesFPSGameControllerBase
 
     public override void InitializeWavesFPSGame(WavesFPSGameViewModel wavesFPSGame)
     {
-        // Bind the local players death to the command
-        wavesFPSGame.CurrentPlayerProperty.First().Subscribe(player => 
-                player.DiedAsObservable.Subscribe(wavesFPSGame.PlayerDied).DisposeWith(wavesFPSGame)
-            );
+        Debug.Log("Waves Game Initialized");
+
+        LocalPlayer.DiedAsObservable.Subscribe(wavesFPSGame.PlayerDied).DisposeWith(wavesFPSGame);
+
+        //// Bind the local players death to the command
+        //wavesFPSGame.CurrentPlayerProperty.First().Subscribe(player => 
+        //        player.DiedAsObservable.Subscribe(wavesFPSGame.PlayerDied).DisposeWith(wavesFPSGame)
+        //    );
 
         wavesFPSGame.WavesStateProperty
             .Subscribe(s => StateChanged(wavesFPSGame, s))

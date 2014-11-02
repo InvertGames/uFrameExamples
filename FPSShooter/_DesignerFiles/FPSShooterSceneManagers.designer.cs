@@ -182,6 +182,9 @@ public class FPSMainMenuManagerBase : SceneManager {
         Container.RegisterController<FPSPlayerController>(FPSPlayerController);
         Container.RegisterController<FPSWeaponController>(FPSWeaponController);
         this.Container.InjectAll();
+        FPSMenuController.Initialize(FPSMenu);
+        FPSPlayerController.Initialize(LocalPlayer);
+        FPSGameController.Initialize(FPSGame);
     }
     
     public virtual void PlayTransitionComplete(WavesFPSGameManager sceneManager) {
@@ -197,10 +200,7 @@ public class FPSMainMenuManagerBase : SceneManager {
     
     public override void Initialize() {
         base.Initialize();
-        FPSMenuController.Initialize(FPSMenu);
         FPSMenu.Play.Subscribe(_=> Play()).DisposeWith(this.gameObject);
-        FPSPlayerController.Initialize(LocalPlayer);
-        FPSGameController.Initialize(FPSGame);
     }
 }
 
@@ -358,6 +358,8 @@ public class WavesFPSGameManagerBase : SceneManager {
         Container.RegisterController<FPSPlayerController>(FPSPlayerController);
         Container.RegisterController<FPSWeaponController>(FPSWeaponController);
         this.Container.InjectAll();
+        WavesFPSGameController.Initialize(FPSGame);
+        FPSPlayerController.Initialize(LocalPlayer);
     }
     
     public virtual void MainMenuTransitionComplete(FPSMainMenuManager sceneManager) {
@@ -384,9 +386,7 @@ public class WavesFPSGameManagerBase : SceneManager {
     
     public override void Initialize() {
         base.Initialize();
-        WavesFPSGameController.Initialize(FPSGame);
         FPSGame.MainMenu.Subscribe(_=> MainMenu()).DisposeWith(this.gameObject);
         FPSGame.QuitGame.Subscribe(_=> QuitGame()).DisposeWith(this.gameObject);
-        FPSPlayerController.Initialize(LocalPlayer);
     }
 }
