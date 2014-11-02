@@ -1,0 +1,71 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -485475701, guid: 8909b3110239b804886e7150f2263a2a, type: 3}
+  m_Name: FPSWeaponStateMachine
+  m_EditorClassIdentifier: 
+  _jsonData: '{"Name":"FPSWeaponStateMachine", "Version":"1.501", "Identifier":"26531179-bd90-422d-954d-796864a9408a",
+    "FilterState":{"_CLRType":"FilterState", "FilterStack":[  ]}, "Settings":{"_CLRType":"ElementDiagramSettings",
+    "SnapSize":"10", "CodePathStrategyName":"Default", "GridLinesColor":{"r":"0.271",
+    "g":"0.271", "b":"0.271", "a":"1"}, "GridLinesColorSecondary":{"r":"0.169", "g":"0.169",
+    "b":"0.169", "a":"1"}, "AssociationLinkColor":{"r":"1", "g":"1", "b":"1", "a":"1"},
+    "DefinitionLinkColor":{"r":"0", "g":"1", "b":"1", "a":"1"}, "InheritanceLinkColor":{"r":"0",
+    "g":"1", "b":"0", "a":"1"}, "SceneManagerLinkColor":{"r":"0.5", "g":"0.5", "b":"0.5",
+    "a":"1"}, "SubSystemLinkColor":{"r":"0.5", "g":"0.5", "b":"0.5", "a":"1"}, "TransitionLinkColor":{"r":"1",
+    "g":"0.9215686", "b":"0.01568628", "a":"1"}, "ViewLinkColor":{"r":"0", "g":"0",
+    "b":"1", "a":"1"}, "RootNamespace":""}, "PositionData":{"_CLRType":"FilterPositionData",
+    "460055c3-f0ba-4e8b-ac28-79bbddf40870":{"460055c3-f0ba-4e8b-ac28-79bbddf40870":{"x":"113",
+    "y":"309"}, "68922b5c-ff27-4acd-808d-3d39d0bf28c0":{"x":"426", "y":"309"}, "377c58f5-1ab9-4533-a41d-a70d8fb9bc65":{"x":"735",
+    "y":"306"}, "2324b253-7329-4c15-85cd-636f5ba166ab":{"x":"737", "y":"501"}, "210225af-ef39-4d39-8053-540940114053":{"x":"428",
+    "y":"528"}}}, "SceneFlow":{"_CLRType":"StateMachineNodeData", "Name":"FPSWeaponStateMachine",
+    "IsCollapsed":"false", "Identifier":"460055c3-f0ba-4e8b-ac28-79bbddf40870", "Items":[
+    {"_CLRType":"StateMachineTransition", "Name":"BeginFiring", "Identifier":"d0280295-6b14-4f68-ac16-331e2ee01b00",
+    "Flags":{"_CLRType":"true", "bac278d6-4870-4861-aa29-2dc7ce50b41d":"true"}, "DataBag":{"_CLRType":"DataBag"}},
+    {"_CLRType":"StateMachineTransition", "Name":"EndFiring", "Identifier":"95b02084-8b89-43fd-b085-f771757033a2",
+    "Flags":{"_CLRType":"true", "dcb7dda1-16dc-45aa-bf12-672ca29c360a":"true"}, "DataBag":{"_CLRType":"DataBag"}},
+    {"_CLRType":"StateMachineTransition", "Name":"OnReload", "Identifier":"20d44c63-309e-4012-838e-7feefddee20d",
+    "Flags":{"_CLRType":"true", "9ba2b27d-32de-4ead-91d3-b70df34e64bd":"true"}, "DataBag":{"_CLRType":"DataBag"}},
+    {"_CLRType":"StateMachineTransition", "Name":"FinishedReloading", "Identifier":"2b8a7128-9eed-4286-ae39-155fd3321c56",
+    "Flags":{"_CLRType":"true", "25d780da-d1e5-4981-9502-37e5d338bcaf":"true"}, "DataBag":{"_CLRType":"DataBag"}},
+    {"_CLRType":"StateMachineTransition", "Name":"OnEmpty", "Identifier":"24ce20e4-22c2-4d1d-b8c0-d11252c1abe7",
+    "Flags":{"_CLRType":"true", "9ccd573f-5994-4105-8268-22329c67d4dc":"true"}, "DataBag":{"_CLRType":"DataBag"}}
+    ], "CollapsedValues":{}, "Flags":{"_CLRType":"true", "098f2c78-c7ba-4c5d-9f39-9756959eed0f":"false",
+    "e6ac9ea4-a1ed-46b2-9701-fa5bd4b9a0da":"false"}, "DataBag":{"_CLRType":"DataBag"},
+    "StartStateIdentifier":"68922b5c-ff27-4acd-808d-3d39d0bf28c0"}, "Nodes":[ {"_CLRType":"StateMachineStateData",
+    "Name":"Idle", "IsCollapsed":"false", "Identifier":"68922b5c-ff27-4acd-808d-3d39d0bf28c0",
+    "Items":[ {"_CLRType":"StateTransitionData", "Name":"Transition", "Identifier":"2b70dbbc-8b08-41b1-a343-ec67b12183b2",
+    "Flags":{"_CLRType":"true"}, "DataBag":{"_CLRType":"DataBag"}, "TransitionToIdentifier":"377c58f5-1ab9-4533-a41d-a70d8fb9bc65",
+    "TransitionIdentifier":"d0280295-6b14-4f68-ac16-331e2ee01b00"}, {"_CLRType":"StateTransitionData",
+    "Name":"Transition", "Identifier":"a9a8b237-3e52-4b35-8745-58569507e584", "Flags":{"_CLRType":"true"},
+    "DataBag":{"_CLRType":"DataBag"}, "TransitionToIdentifier":"2324b253-7329-4c15-85cd-636f5ba166ab",
+    "TransitionIdentifier":"20d44c63-309e-4012-838e-7feefddee20d"}, {"_CLRType":"StateTransitionData",
+    "Name":"Transition", "Identifier":"c014c6f7-34d1-4951-8bf2-7e1a3720aa06", "Flags":{"_CLRType":"true"},
+    "DataBag":{"_CLRType":"DataBag"}, "TransitionToIdentifier":"210225af-ef39-4d39-8053-540940114053",
+    "TransitionIdentifier":"24ce20e4-22c2-4d1d-b8c0-d11252c1abe7"} ], "CollapsedValues":{},
+    "Flags":{"_CLRType":"true", "098f2c78-c7ba-4c5d-9f39-9756959eed0f":"false", "e6ac9ea4-a1ed-46b2-9701-fa5bd4b9a0da":"false"},
+    "DataBag":{"_CLRType":"DataBag"}}, {"_CLRType":"StateMachineStateData", "Name":"Firing",
+    "IsCollapsed":"false", "Identifier":"377c58f5-1ab9-4533-a41d-a70d8fb9bc65", "Items":[
+    {"_CLRType":"StateTransitionData", "Name":"Transition", "Identifier":"edb42a41-b3ab-4032-97b0-db6550d3e524",
+    "Flags":{"_CLRType":"true"}, "DataBag":{"_CLRType":"DataBag"}, "TransitionToIdentifier":"68922b5c-ff27-4acd-808d-3d39d0bf28c0",
+    "TransitionIdentifier":"95b02084-8b89-43fd-b085-f771757033a2"} ], "CollapsedValues":{},
+    "Flags":{"_CLRType":"true", "098f2c78-c7ba-4c5d-9f39-9756959eed0f":"false", "e6ac9ea4-a1ed-46b2-9701-fa5bd4b9a0da":"false"},
+    "DataBag":{"_CLRType":"DataBag"}}, {"_CLRType":"StateMachineStateData", "Name":"Reloading",
+    "IsCollapsed":"false", "Identifier":"2324b253-7329-4c15-85cd-636f5ba166ab", "Items":[
+    {"_CLRType":"StateTransitionData", "Name":"Transition", "Identifier":"97822897-cc03-42fa-b6c8-e94f0cef78f2",
+    "Flags":{"_CLRType":"true"}, "DataBag":{"_CLRType":"DataBag"}, "TransitionToIdentifier":"68922b5c-ff27-4acd-808d-3d39d0bf28c0",
+    "TransitionIdentifier":"2b8a7128-9eed-4286-ae39-155fd3321c56"} ], "CollapsedValues":{},
+    "Flags":{"_CLRType":"true", "098f2c78-c7ba-4c5d-9f39-9756959eed0f":"false", "e6ac9ea4-a1ed-46b2-9701-fa5bd4b9a0da":"false"},
+    "DataBag":{"_CLRType":"DataBag"}}, {"_CLRType":"StateMachineStateData", "Name":"Empty",
+    "IsCollapsed":"false", "Identifier":"210225af-ef39-4d39-8053-540940114053", "Items":[
+    {"_CLRType":"StateTransitionData", "Name":"Transition", "Identifier":"aadec5f7-7fbd-4ef4-a1a6-7f4c124dfdba",
+    "Flags":{"_CLRType":"true"}, "DataBag":{"_CLRType":"DataBag"}, "TransitionToIdentifier":"2324b253-7329-4c15-85cd-636f5ba166ab",
+    "TransitionIdentifier":"20d44c63-309e-4012-838e-7feefddee20d"} ], "CollapsedValues":{},
+    "Flags":{"_CLRType":"true", "098f2c78-c7ba-4c5d-9f39-9756959eed0f":"false", "e6ac9ea4-a1ed-46b2-9701-fa5bd4b9a0da":"false"},
+    "DataBag":{"_CLRType":"DataBag"}} ]}'
